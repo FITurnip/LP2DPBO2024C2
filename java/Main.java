@@ -44,7 +44,7 @@ public class Main {
             productIdLen = Math.max(productIdLen, String.valueOf(productIdLen).length());
             nameLen = Math.max(nameLen, name.length());
             brandLen = Math.max(brandLen, brand.length());
-            priceLen = Math.max(priceLen, price.length());
+            priceLen = Math.max(priceLen, String.valueOf(price).length());
             sizeLen = Math.max(sizeLen, size.length());
             materialLen = Math.max(materialLen, material.length());
             genderLen = Math.max(genderLen, gender.length());
@@ -73,8 +73,7 @@ public class Main {
 
         for(int borderItr = 0; borderItr < totalColumnLen; borderItr++) System.out.print("-");
         System.out.print("\n");
-
-
+        
         // Closing the scanner
         scanner.close();
     }
