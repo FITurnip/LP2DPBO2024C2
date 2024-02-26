@@ -20,9 +20,13 @@ public class Main {
             nameLen = 5, brandLen = 6, priceLen = 6;
         int totalColumnLen = 28;
 
+        // looping input attribute
+        boolean inpuStopped = false;
+        String nextInput = null;
+
         // Prompting the user to input at least three products
         System.out.println("Enter details for at least three products:");
-        for (; productId <= 3; productId++) {
+        while (!inpuStopped) {
             // input from user
             System.out.println("Product " + productId + ":");
             System.out.print("Enter product name: "); name = scanner.nextLine();
@@ -50,6 +54,12 @@ public class Main {
             genderLen = Math.max(genderLen, gender.length());
             colorLen = Math.max(colorLen, color.length());
             sleeveTypeLen = Math.max(sleeveTypeLen, sleeveType.length());
+            
+            if(productId > 3) {
+                System.out.print("Next? [1 for yes]: "); nextInput = scanner.nextLine();
+                if(nextInput.compareTo("1") != 0) inpuStopped = true;
+            }
+            productId++;
         }
 
         // Printing the list of products in a table
