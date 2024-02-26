@@ -12,7 +12,8 @@ Pada dasarnya terdiri dari tiga class:
 1. Clothing: size, material, gender
 2. Shirt: color, sleeve_type
 3. Product: idProduct, name, brand, price
-Visualisasi kelas seperti di atas. Program didesain untuk dapat memasukkan data product ke dalam list. Isi list tersebut minimal 3 buah. Setelah dimasukkan 3 product, program dapat dihentikan atau dijalankan kembali untuk mendapatkan input.
+
+Visualisasi kelas seperti di atas.Program didesain untuk dapat memasukkan data product ke dalam list. Isi list tersebut minimal 3 buah. Setelah dimasukkan 3 product, program dapat dihentikan atau dijalankan kembali untuk mendapatkan input.
 
 ## Penjelesan Alur
 1. Data masuk dari user
