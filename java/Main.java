@@ -55,7 +55,7 @@ public class Main {
             colorLen = Math.max(colorLen, color.length());
             sleeveTypeLen = Math.max(sleeveTypeLen, sleeveType.length());
             
-            if(productId > 3) {
+            if(productId >= 3) {
                 System.out.print("Next? [1 for yes]: "); nextInput = scanner.nextLine();
                 if(nextInput.compareTo("1") != 0) inpuStopped = true;
             }

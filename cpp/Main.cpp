@@ -21,9 +21,14 @@ int main() {
         nameLen = 5, brandLen = 6, priceLen = 6;
     int totalColumnLen = 28;
 
+    // looping input attribute
+    bool inpuStopped = false;
+    string nextInput;
+
     // Prompting the user to input at least three products
     cout << "Enter details for at least three products:" << endl;
-    for (; productId <= 3; productId++) {
+
+    while(!inpuStopped) {
         // input from user
         cout << "Product " << productId << ":" << endl;
         cout << "Enter product name: "; getline(cin, name);
@@ -52,6 +57,13 @@ int main() {
         genderLen = max(genderLen, static_cast<int>(gender.length()));
         colorLen = max(colorLen, static_cast<int>(color.length()));
         sleeveTypeLen = max(sleeveTypeLen, static_cast<int>(sleeveType.length()));
+
+
+        if(productId >= 3) {
+            cout << "Next? [1 for yes]: "; getline(cin, nextInput);
+            if(nextInput.compare("1") != 0) inpuStopped = true;
+        }
+        productId++;
     }
 
     // Printing the list of products in a table
