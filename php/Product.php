@@ -8,17 +8,8 @@ class Product extends Shirt {
     private $brand;
     private $price;
 
-    // Default constructor
-    public function __construct() {
-        parent::__construct();
-        $this->idProduct = 0;
-        $this->name = "";
-        $this->brand = "";
-        $this->price = 0;
-    }
-
     // Parameterized constructor
-    public function __construct($size, $material, $gender, $color, $sleeveType, $idProduct, $name, $brand, $price) {
+    public function __construct($size = 0, $material = "", $gender = "", $color = "", $sleeveType = "", $idProduct = "", $name = "", $brand = "", $price = 0) {
         parent::__construct($size, $material, $gender, $color, $sleeveType);
         $this->idProduct = $idProduct;
         $this->name = $name;
