@@ -21,12 +21,12 @@ public class Main {
         int totalColumnLen = 28;
 
         // looping input attribute
-        boolean inpuStopped = false;
+        boolean inputStopped = false;
         String nextInput = null;
 
         // Prompting the user to input at least three products
         System.out.println("Enter details for at least three products:");
-        while (!inpuStopped) {
+        while (!inputStopped) {
             // input from user
             System.out.println("Product " + productId + ":");
             System.out.print("Enter product name: "); name = scanner.nextLine();
@@ -57,7 +57,7 @@ public class Main {
             
             if(productId >= 3) {
                 System.out.print("Next? [1 for yes]: "); nextInput = scanner.nextLine();
-                if(nextInput.compareTo("1") != 0) inpuStopped = true;
+                if(nextInput.compareTo("1") != 0) inputStopped = true;
             }
             productId++;
         }
